@@ -19,6 +19,7 @@ import java.util.List;
 public class User implements UserDetails {
 
     @Id
+    @Column(name = "idUser")
     private Long idUser;
 
     @Column(name = "username")

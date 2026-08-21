@@ -71,7 +71,7 @@ public class SecurityConfig implements WebMvcConfigurer{
                 .authorizeHttpRequests(auth -> auth
 
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/users/check-username", "/users/check-email", "/stocks").permitAll()
-                        .requestMatchers("/register", "/login", "/verifyToken", "/error").permitAll()
+                        .requestMatchers("/register", "/auth/login", "/verifyToken", "/error", "/translate").permitAll()
                         .requestMatchers("/users", "/users/editPassword/**").hasRole("ADMIN")
                         .requestMatchers("/users/edit/**", "/users/delete/**", "/users/**").hasAnyRole("USER", "ADMIN")
                         .requestMatchers("/advices/edit/**", "/advices/delete/**", "/advices/create/**","/advices/check-phrase").hasRole("ADMIN")

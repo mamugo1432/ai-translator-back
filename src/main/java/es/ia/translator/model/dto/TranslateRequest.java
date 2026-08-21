@@ -5,7 +5,12 @@ import jakarta.validation.constraints.NotBlank;
 public record TranslateRequest(
 
         @NotBlank
-        String phrase
+        String phrase,
 
+        @NotBlank
+        String sourceLanguage,
+
+        @NotBlank
+        String targetLanguage
 ) {
 }
